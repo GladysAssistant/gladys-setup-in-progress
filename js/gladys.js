@@ -1,4 +1,4 @@
-setInterval(detectGladysContainer, 5000);
+setInterval(detectGladysContainer, 30000);
 
 var currentHostname = window.location.hostname;
 var gladysUrl = 'http://' + currentHostname + '/signup';
