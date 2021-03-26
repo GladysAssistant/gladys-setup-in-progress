@@ -9,5 +9,12 @@ function detectGladysContainer() {
   });
 }
 
-detectGladysContainer();
-setInterval(detectGladysContainer, 5000);
+window.addEventListener("DOMContentLoaded", (event) => {
+  if (navigator.language && navigator.language.indexOf("fr") !== -1) {
+    document.getElementById("description-text-fr").style.display = "block";
+  } else {
+    document.getElementById("description-text-en").style.display = "block";
+  }
+  detectGladysContainer();
+  setInterval(detectGladysContainer, 5000);
+});
